@@ -58,3 +58,6 @@ A recent version of Docker and Docker-Compose.
     - Tick "Default Login Method"
   - Under "Users"
     - Tick "Automatically Create Accounts"
+
+## Known issues
+  - Mounting the `wp-content` directory with docker results in the impossibility to choose language upon installation.
