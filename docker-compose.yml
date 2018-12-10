@@ -1,0 +1,48 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress:4.9.8-apache
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - http_proxy
+      - https_proxy
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
+      - WORDPRESS_DB_USER=${MYSQL_USER}
+      - WORDPRESS_DB_PASSWORD=${MYSQL_PASSWORD}
+      - WORDPRESS_CONFIG_EXTRA=define('SHIBBOLETH_DISALLOW_FILE_MODS', true);
+    volumes:
+      - ./wp/apache2/sites-available:/etc/apache2/sites-available
+      - ./data/wp/wp-content:/var/www/html/wp-content
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+      - MYSQL_DATABASE
+      - MYSQL_RANDOM_ROOT_PASSWORD=1
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+
+  rp:
+    image: bibcnrs/shibboleth-sp
+    ports:
+        - 443:443
+    environment:
+        - http_proxy
+        - https_proxy
+        - APPLI_APACHE_SERVERNAME
+        - APPLI_APACHE_SERVERADMIN
+        - APPLI_APACHE_LOGLEVEL
+    working_dir: /var/www/html
+    volumes:
+        - ./rp/shibboleth/:/etc/shibboleth/
+        - ./rp/shibboleth/ssl:/etc/shibboleth/ssl
+        - ./rp/apache2/sites-available:/etc/apache2/sites-available
+    restart: always
