@@ -17,7 +17,7 @@ services:
       - WORDPRESS_CONFIG_EXTRA=define('SHIBBOLETH_DISALLOW_FILE_MODS', true);
     volumes:
       - ./wp/apache2/sites-available:/etc/apache2/sites-available
-      - ./data/wp/wp-content:/var/www/html/wp-content
+      - ./ezmesure-widget:/var/www/html/wp-content/plugins/ezmesure-widget
 
   db:
     image: mysql:5.7
@@ -28,7 +28,7 @@ services:
       - MYSQL_DATABASE
       - MYSQL_RANDOM_ROOT_PASSWORD=1
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      - db-content:/var/lib/mysql
 
   rp:
     image: bibcnrs/shibboleth-sp
@@ -46,3 +46,6 @@ services:
         - ./rp/shibboleth/ssl:/etc/shibboleth/ssl
         - ./rp/apache2/sites-available:/etc/apache2/sites-available
     restart: always
+
+volumes:
+  db-content:

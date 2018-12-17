@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ezMESURE Widget - 1.0.0\n"
+"PO-Revision-Date: 2018-12-17 14:58+0100\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2\n"
+
+msgid "ezMESURE Widget"
+msgstr "Widget ezMESURE"
+
+msgid "ezMESURE authentication"
+msgstr "Authentification ezMESURE"
+
+msgid "Vertical Bars"
+msgstr "Barres verticales"
+
+msgid "Horizontal Bars"
+msgstr "Barres horizontales"
+
+msgid "Line"
+msgstr "Ligne"
+
+msgid "Table"
+msgstr "Table"
+
+msgid "No data"
+msgstr "Pas de données"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Index"
+msgstr "Index"
+
+msgid "Top length"
+msgstr "Taille tu top"
+
+msgid "Field"
+msgstr "Champ"
+
+msgid "Chart type"
+msgstr "Type de graphique"
+
+msgid "Visible by"
+msgstr "Visible par"
+
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Vous n'avez pas les permissions suffisantes pour accéder à cette page."
+
+msgid "Authentication token"
+msgstr "Token d'authentification"
+
+msgid "Get your token by accessing your space at <a href=\"https://ezmesure.couperin.org/myspace\">ezMESURE</a>."
+msgstr "Obtenez votre token en accédant à votre espace <a href=\"https://ezmesure.couperin.org/myspace\">ezMESURE</a>."
+
+msgid "API URL"
+msgstr "URL de l'API"
+
+msgid "ezMESURE API URL to use. Except in special cases, leave the default."
+msgstr "URL de l'API ezMESURE à utiliser. Sauf cas particuliers, laissez la valeur par défaut."
