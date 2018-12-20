@@ -239,12 +239,12 @@ class Ezmesure_Widget extends WP_Widget {
 		switch ($chart_type) {
 			case 'line':
 			case 'vert_bar':
-				$vega_spec['encoding']['x'] = array("field" => "key", "type" => "ordinal");
-				$vega_spec['encoding']['y'] = array("field" => "doc_count", "type" => "quantitative");
+				$vega_spec['encoding']['x'] = array("field" => "key", "type" => "ordinal", "axis" => array("title" => null));
+				$vega_spec['encoding']['y'] = array("field" => "doc_count", "type" => "quantitative", "axis" => array("title" => null));
 				break;
 			case 'bar':
-			  $vega_spec['encoding']['x'] = array("field" => "doc_count", "type" => "quantitative");
-				$vega_spec['encoding']['y'] = array("field" => "key", "type" => "ordinal");
+			  $vega_spec['encoding']['x'] = array("field" => "doc_count", "type" => "quantitative", "axis" => array("title" => null));
+				$vega_spec['encoding']['y'] = array("field" => "key", "type" => "ordinal", "axis" => array("title" => null));
 				break;
 		}
 
