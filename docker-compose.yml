@@ -4,7 +4,7 @@ services:
 
   wordpress:
     image: wordpress:4.9.8-apache
-    restart: always
+    restart: unless-stopped
     ports:
       - 8080:80
     environment:
@@ -21,7 +21,7 @@ services:
 
   db:
     image: mysql:5.7
-    restart: always
+    restart: unless-stopped
     environment:
       - MYSQL_USER
       - MYSQL_PASSWORD
@@ -45,7 +45,7 @@ services:
         - ./rp/shibboleth/:/etc/shibboleth/
         - ./rp/shibboleth/ssl:/etc/shibboleth/ssl
         - ./rp/apache2/sites-available:/etc/apache2/sites-available
-    restart: always
+    restart: unless-stopped
 
 volumes:
   db-content:
