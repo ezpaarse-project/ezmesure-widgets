@@ -129,7 +129,7 @@
             </MetadataProvider>
 
             <!-- Metadonnées de la fédération RENATER de test -->
-            <MetadataProvider type="XML" uri="http://federation.renater.fr/test/renater-test-metadata.xml"
+            <MetadataProvider type="XML" uri="https://metadata.federation.renater.fr/test/preview/preview-all-renater-test-metadata.xml"
                   backingFilePath="renater-test-metadata.xml" reloadInterval="3600" id="renater-test">
                 <MetadataFilter type="RequireValidUntil" maxValidityInterval="2419200"/>
                 <MetadataFilter type="Signature" certificate="metadata-federation-renater.crt"/>
