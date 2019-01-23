@@ -132,7 +132,7 @@
             <MetadataProvider type="XML" uri="https://metadata.federation.renater.fr/test/preview/preview-all-renater-test-metadata.xml"
                   backingFilePath="renater-test-metadata.xml" reloadInterval="3600" id="renater-test">
                 <MetadataFilter type="RequireValidUntil" maxValidityInterval="2419200"/>
-                <MetadataFilter type="Signature" certificate="metadata-federation-renater.crt"/>
+                <MetadataFilter type="Signature" certificate="renater-metadata-signing-cert-2016.pem"/>
             </MetadataProvider>
 
             <!-- Metadonnées de TestShib https://www.testshib.org/configure.html -->
