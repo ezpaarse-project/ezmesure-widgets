@@ -1,4 +1,7 @@
 # ezMESURE Widgets
+  
+>  **Warning**  
+This repository is no longer maintained and has security vulnerabilities. The code is only intended to demonstrate the feasibility of integration.
 
 This Wordpress site demonstrates how to use the [ezMESURE](https://ezmesure.couperin.org) API in order to show charts and metrics to users authenticated via Shibboleth.
 
